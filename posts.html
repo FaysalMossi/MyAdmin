@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Posts</title>
+</head>
+<body>
+    <nav class="nav-wraper fixed blue">
+        <div class="container  purple darken-3 ">
+            <a href="" class="brand-logo">MYadmin</a>
+            <a href="" class="sidenav-trigger" data-target="mobile-links">
+                <i class="material-icons">
+                    menu
+                </i>
+            </a>
+        <ul class="right hide-on-med-and-down">
+            <li><a href="index.html" class="active">Dashbord</a></li>
+            <li><a href="posts.html">Posts</a></li>
+            <li><a href="category.html">Categories</a></li>
+            <li><a href="comment.html">Comments</a></li>
+            <li><a href="users.html">Users</a></li>
+            <li><button class="sidenav-trigger N/A transparent btn z-depth-0" data-target="mobile-links"><i class="material-icons">menu</i></button></li>          
+        </ul>
+        </div> 
+    </nav>
+     <!--Mobiles links -->
+    <ul id="mobile-links" class="sidenav">
+        <li><div class="user-view">
+          <div class="background">
+            <img src="pexels-pixabay-247676.jpg">
+          </div>
+          <a href="#user"><img class="circle" src="pic1.png"></a>
+          <a href="#name"><span class="white-text name">Faysal Abdoulkadri Mossi</span></a>
+          <a href="#email"><span class="white-text email">faysalmossi@gmail.com</span></a>
+        </div></li>
+        <li><a href="#!"><i class="material-icons">dashboard</i>Dashbord</a></li>
+        <li><a href="posts.html">Posts</a></li>
+        <li><a href="category.html">Categories</a></li>
+        <li><a href="comment.html">Comments</a></li>
+        <li><a href="users.html">Users</a></li>
+        <li><div class="divider"></div></li>
+        <li><a class="subheader">Account Controls</a></li>
+        <li><a class="waves-effect" href="#!">Logout</a></li>
+      </ul>
+
+    <!--tableau-->
+    <div class="container-fluid">
+        <div class="container" style="padding: 2em;">
+            <div class="card">
+                    
+                <div class="card-content">
+                    <span class="card-title">
+                        Posts
+                    </span>
+                    <table class="striped responsive-table">
+                        <thead>
+                            <th>Title</th>
+                            <th>Category</th>
+                            <th>Date Created</th>
+                            <th></th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Post One</td>
+                                <td>Web Development</td>
+                                <td>Oct 1,2019</td>
+                                <td><a href="" class="btn blue">DETAILS</a></td>
+                            </tr>
+                            <tr>
+                                <td>Post Two</td>
+                                <td>Graphic Design</td>
+                                <td>Oct 2,2019</td>
+                                <td><a href="" class="btn blue">DETAILS</a></td>
+                            </tr>
+                            <tr>
+                                <td>Post Three</td>
+                                <td>Web Development</td>
+                                <td>Oct 3,2019</td>
+                                <td><a href="" class="btn blue">DETAILS</a></td>
+                            </tr>
+                            <tr>
+                                <td>Post Four</td>
+                                <td>Web Development</td>
+                                <td>Oct 4,2019</td>
+                                <td><a href="" class="btn blue">DETAILS</a></td>
+                            </tr>
+                            <tr>
+                                <td>Post Five</td>
+                                <td>Web Development</td>
+                                <td>Oct 5,2019</td>
+                                <td><a href="" class="btn blue">DETAILS</a></td>
+                            </tr>
+                            <tr>
+                                <td>Post Six</td>
+                                <td>Web Development</td>
+                                <td>Oct 6,2019</td>
+                                <td><a href="" class="btn blue">DETAILS</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="card-action">
+                    <ul class="pagination">
+                        <li class="disabled"><a href="#!"><i class="material-icons blue-text">chevron_left</i></a></li>
+                        <li class="active blue"><a class="white-text" href="#!">1</a></li>
+                        <li class="waves-effect"><a class="blue-text" href="#!">2</a></li>
+                        <li class="waves-effect"><a class="blue-text" href="#!">3</a></li>
+                        <li class="waves-effect"><a class="blue-text" href="#!">4</a></li>
+                        <li class="waves-effect"><a class="blue-text" href="#!">5</a></li>
+                        <li class="waves-effect"><a class="blue-text" href="#!"><i class="material-icons blue-text">chevron_right</i></a></li>
+                      </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    
+      <!--footer-->
+      <footer class="blue white-text center" style="padding: 1.5em;">
+        <p>MyAdmin CodeLoccol Copyright © 2019</p>
+
+    </footer>
+</body>
+</html>

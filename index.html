@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.ckeditor.com/4.10.1/standard/ckeditor.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>MyAdmin</title>
+    <!--flow graph-->
+    <script>
+        window.onload = function () {
+        
+        var chart = new CanvasJS.Chart("chartContainer", {
+            animationEnabled: true,
+            theme: "light2",
+            title:{
+                text: "Daily Visitors"
+            },
+            data: [{        
+                type: "line",
+                  indexLabelFontSize: 16,
+                dataPoints: [
+                    { y: 460 },
+                    { y: 414},
+                    { y: 520, indexLabel: "\u2191 highest",markerColor: "red", markerType: "triangle" },
+                    { y: 460 },
+                    { y: 450 },
+                    { y: 500 },
+                    { y: 480 },
+                    { y: 480 },
+                    { y: 410 , indexLabel: "\u2193 lowest",markerColor: "DarkSlateGrey", markerType: "cross" },
+                    { y: 500 },
+                    { y: 480 },
+                    { y: 510 }
+                ]
+            }]
+        });
+        chart.render();
+        
+        }
+        </script>
+</head>
+<body>
+    <nav class="nav-wraper fixed blue">
+        <div class="container  purple darken-3 ">
+            <a href="" class="brand-logo">MYadmin</a>
+            <a href="" class="sidenav-trigger" data-target="mobile-links">
+                <i class="material-icons">
+                    menu
+                </i>
+            </a>
+        <ul class="right hide-on-med-and-down">
+            <li><a href="index.html" class="active">Dashbord</a></li>
+            <li><a href="posts.html">Posts</a></li>
+            <li><a href="category.html">Categories</a></li>
+            <li><a href="comment.html">Comments</a></li>
+            <li><a href="users.html">Users</a></li>
+            <li><button class="sidenav-trigger N/A transparent btn z-depth-0" data-target="mobile-links"><i class="material-icons">menu</i></button></li>
+                      
+        </ul>
+        </div> 
+    </nav>
+     <!--Mobiles links -->
+     <ul id="mobile-links" class="sidenav">
+        <li><div class="user-view">
+          <div class="background">
+            <img src="pexels-pixabay-247676.jpg">
+          </div>
+          <a href="#user"><img class="circle" src="pic1.png"></a>
+          <a href="#name"><span class="white-text name">Faysal Abdoulkadri Mossi</span></a>
+          <a href="#email"><span class="white-text email">faysalmossi@gmail.com</span></a>
+        </div></li>
+        <li><a href="#!"><i class="material-icons">dashboard</i>Dashbord</a></li>
+        <li><a href="posts.html">Posts</a></li>
+        <li><a href="category.html">Categories</a></li>
+        <li><a href="comment.html">Comments</a></li>
+        <li><a href="users.html">Users</a></li>
+        <li><div class="divider"></div></li>
+        <li><a class="subheader">Account Controls</a></li>
+        <li><a class="waves-effect" href="#!">Logout</a></li>
+      </ul>
+      
+
+    <!--cards-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col s12 m6 l3">
+                <div class="card blue white-text ">
+                    <div class="card-content center">
+                        <i class="fa-solid fa-face-smile fa-5x"></i>
+                        <h5>Monthly Visitors</h5>
+                        <h3>35900</h3>
+                        <div class="progress grey">
+                            <div class="determinate white" style="width: 40%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m6 l3">
+                <div class="card">
+                    <div class="card-content center">
+                        <i class="fa-solid fa-pen fa-5x"></i>
+                        <h5>Blog Posts</h5>
+                        <h3>207</h3>
+                        <div class="progress grey">
+                            <div class="determinate blue" style="width: 30%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m6 l3">
+                <div class="card blue white-text ">
+                    <div class="card-content center">
+                        <i class="fa-solid fa-message fa-5x"></i>
+                        <h5>Comments</h5>
+                        <h3>2300</h3>
+                        <div class="progress grey">
+                            <div class="determinate white" style="width: 40%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m6 l3">
+                <div class="card">
+                    <div class="card-content center">
+                        <i class="fa-solid fa-users fa-5x"></i>
+                        <h5>Users</h5>
+                        <h3>410</h3>
+                        <div class="progress grey">
+                            <div class="determinate blue" style="width: 20%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--graph-->
+
+    <div class="container-fluid blue lighten-2 ">
+        <div class="row" style="padding: 1em;">
+            <div class="col s12 m12 l8">
+                <div class="card">
+                    <div class="card-content">
+                        <div id="chartContainer" style="height: 370px; width: 100%;"></div>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="col s12 m12 l4">
+                <div class="card">
+                    <div class="card-content">
+                        <ul class="collection with-header" style="width: 100%;">
+                            <li class="collection-header">
+                                <h5>Laster Comments</h5>
+                            </li>
+                            <li class="collection-item avatar">
+                                <img src="pic1.png" alt="" class="circle">
+                                <span class="title">Rachida Zakou</span>
+                                <p>Lorem ipsum dolor sit amet consectetur.<br>
+                                   <span class="green-text">Approve</span> <span class="red-text">Deny</span>
+                                </p>
+                              </li>
+                              <li class="collection-item avatar">
+                                <img src="pic1.png" alt="" class="circle">
+                                <span class="title">Rachida Zakou</span>
+                                <p>Lorem ipsum dolor sit amet consectetur.<br>
+                                   <span class="green-text">Approve</span> <span class="red-text">Deny</span>
+                                </p>
+                              </li>
+                              <li class="collection-item avatar">
+                                <img src="pic1.png" alt="" class="circle">
+                                <span class="title">Rachida Zakou</span>
+                                <p>Lorem ipsum dolor sit amet consectetur.<br>
+                                   <span class="green-text">Approve</span> <span class="red-text">Deny</span>
+                                </p>
+                              </li>
+                          </ul>
+
+                    </div>
+                </div>
+                
+            </div>
+              
+        </div>
+    </div>
+
+    <!--posts and todos-->
+    <div class="container-fluid" style="padding: 1em;">
+        <div class="row">
+            <div class="col s12 m9 l9">
+                <div class="card">
+                    
+                    <div class="card-content">
+                        <span class="card-title">
+                            Recent Posts
+                        </span>
+                        <table class="striped responsive-table">
+                            <thead>
+                                <th>Title</th>
+                                <th>Category</th>
+                                <th></th>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Post One</td>
+                                    <td>Web Development</td>
+                                    <td><a href="" class="btn blue">DETAILS</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Post Two</td>
+                                    <td>Graphic Design</td>
+                                    <td><a href="" class="btn blue">DETAILS</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Post Three</td>
+                                    <td>Web Development</td>
+                                    <td><a href="" class="btn blue">DETAILS</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m3 l3">
+                <div class="card">
+                    <div class="card-content">
+                        <span class="card-title">Quick Todos</span>
+                        <div class="input-field">
+                            <input id="add" class="validate" placeholder="Add Todo.." type="text">
+                        </div>
+                        <div>
+                            <ul class="collection">
+                                <li class="collection-item">Todo One <a href="" class="secondary-content"><i class="material-icons">close</i></a></li>
+                                <li class="collection-item">Todo Two<a href="" class="secondary-content"><i class="material-icons">close</i></a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--button add -->
+    <div class="fixed-action-btn">
+        <a class="btn-floating btn-large red">
+          <i class="large material-icons">add</i>
+        </a>
+        <ul>
+            <li><a class="btn-floating blue modal-trigger" href="#modal1"><i class="material-icons">mode_edit</i></a></li>
+            <li><a class="btn-floating blue modal-trigger" href="#modal2"><i class="material-icons">folder</i></a></li>
+            <li><a class="btn-floating blue modal-trigger" href="#modal3"><i class="material-icons">attach_file</i></a></li>
+        </ul>
+      </div>
+      <!--modal-->
+      <!--m1-->
+      <div id="modal1" class="modal">
+        <div class="modal-content">
+            <h4>Add Posts</h4>
+         <div class="input-field">
+            <input id="add" class="validate" type="text">
+            <label for="add">Title</label>
+         </div>
+         <div class="input-field">
+            <input type="text" placeholder="Category">
+             <a class='dropdown-trigger black-text' href='#' data-target='dropdown1'>Select Option</a>
+         </div>
+         <textarea name="text_editor"></textarea>
+        </div>
+        <div class="modal-footer">
+          <a href="#!" class="modal-close btn blue">SUBMIT</a>
+        </div>
+      </div>
+
+
+      <ul id='dropdown1' class='dropdown-content'>
+        <li><a href="#!">Web Developper</a></li>
+        <li><a href="#!">Designer</a></li>
+        <li><a href="">Tester</a></li>
+      </ul>
+      <!--m2-->
+      <div id="modal2" class="modal">
+        <div class="modal-content">
+            <h4>Add Category</h4>
+         <div class="input-field">
+            <input id="Post" class="validate" type="text">
+            <label for="Post">Title</label>
+         </div>
+        </div>
+        <div class="modal-footer">
+          <a href="#!" class="modal-close btn blue">SUBMIT</a>
+        </div>
+      </div>
+      <!--m3-->
+      <div id="modal3" class="modal">
+        <div class="modal-content">
+            <h4>Add User</h4>
+         <div class="input-field">
+            <input id="Name" class="validate" type="text">
+            <label for="Name">Name</label>
+         </div>
+         <div class="input-field">
+            <input id="Email" class="validate" type="text">
+            <label for="Email">Email</label>
+         </div>
+         <div class="input-field">
+            <input id="Password" class="validate" type="text">
+            <label for="Password">Password</label>
+         </div>
+         <div class="input-field">
+            <input id="Confirm" class="validate" type="text">
+            <label for="Confirm">Confirm Password</label>
+         </div>
+        </div>
+        <div class="modal-footer">
+          <a href="#!" class="modal-close btn blue">SUBMIT</a>
+        </div>
+      </div>
+
+
+    <!--footer-->
+    <footer class="blue white-text center" style="padding: 1.5em;">
+        <p>MyAdmin CodeLoccol Copyright © 2019</p>
+
+    </footer>
+
+
+    <script>
+         $(document).ready(function(){
+    $('.sidenav').sidenav();
+  });
+    </script>
+
+
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.fixed-action-btn');
+    var instances = M.FloatingActionButton.init(elems, {
+      direction: 'top'
+    });
+  });
+    </script>
+    <script>
+         $(document).ready(function(){
+    $('.modal').modal();
+  });
+    </script>
+    <script>
+        $('.dropdown-trigger').dropdown();
+    </script>
+    <script>
+        CKEDITOR.replace( 'text_editor' );
+    </script>
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</body>
+</html>
